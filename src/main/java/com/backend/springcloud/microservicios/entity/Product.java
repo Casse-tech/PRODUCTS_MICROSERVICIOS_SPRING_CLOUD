@@ -16,6 +16,8 @@ public class Product {
     @Column(name = "create_at")
     private LocalDate createAt;
 
+    private int sku;
+
     @Transient
     private int port;
 
@@ -67,6 +69,14 @@ public class Product {
         this.createAt = createAt;
     }
 
+    public int getSku() {
+        return sku;
+    }
+
+    public void setSku(int sku) {
+        this.sku = sku;
+    }
+
     public int getPort() {
         return port;
     }
@@ -82,6 +92,8 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", createAt=" + createAt +
+                ", sku=" + sku +
+                ", port=" + port +
                 '}';
     }
 }
