@@ -1,6 +1,6 @@
 package com.backend.springcloud.microservicios.controller;
 
-import com.backend.springcloud.microservicios.entity.Product;
+import com.backend.lib.mcsv.commons.entity.Product;
 import com.backend.springcloud.microservicios.exception.ResourceNotFoundException;
 import com.backend.springcloud.microservicios.service.IProductoService;
 import org.springframework.http.HttpStatus;

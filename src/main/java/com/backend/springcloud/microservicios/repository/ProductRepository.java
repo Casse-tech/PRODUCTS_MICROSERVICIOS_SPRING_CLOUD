@@ -1,6 +1,6 @@
 package com.backend.springcloud.microservicios.repository;
 
-import com.backend.springcloud.microservicios.entity.Product;
+import com.backend.lib.mcsv.commons.entity.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

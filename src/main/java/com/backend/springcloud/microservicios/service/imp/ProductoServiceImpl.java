@@ -1,6 +1,6 @@
 package com.backend.springcloud.microservicios.service.imp;
 
-import com.backend.springcloud.microservicios.entity.Product;
+import com.backend.lib.mcsv.commons.entity.Product;
 import com.backend.springcloud.microservicios.exception.ResourceNotFoundException;
 import com.backend.springcloud.microservicios.repository.ProductRepository;
 import com.backend.springcloud.microservicios.service.IProductoService;
@@ -85,7 +85,7 @@ public class ProductoServiceImpl implements IProductoService {
 
         productBuscado.setName(product.getName());
         productBuscado.setPrice(product.getPrice());
-        productBuscado.setCreateAt(product.getCreateAt());
+        productBuscado.setCreateAt(productBuscado.getCreateAt()!=null?productBuscado.getCreateAt():product.getCreateAt());
         productBuscado.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
 
         Product productoGuardado = productRepository.save(productBuscado);
