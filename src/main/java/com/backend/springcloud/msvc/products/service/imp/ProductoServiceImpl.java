@@ -1,9 +1,9 @@
-package com.backend.springcloud.microservicios.service.imp;
+package com.backend.springcloud.msvc.products.service.imp;
 
 import com.backend.lib.mcsv.commons.entity.Product;
-import com.backend.springcloud.microservicios.exception.ResourceNotFoundException;
-import com.backend.springcloud.microservicios.repository.ProductRepository;
-import com.backend.springcloud.microservicios.service.IProductoService;
+import com.backend.springcloud.msvc.products.exception.ResourceNotFoundException;
+import com.backend.springcloud.msvc.products.repository.ProductRepository;
+import com.backend.springcloud.msvc.products.service.IProductoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
@@ -37,7 +37,9 @@ public class ProductoServiceImpl implements IProductoService {
                     return product;
                 }).collect(Collectors.toList());
 
-        System.out.println("products = " + products);
+        for (Product product : products) {
+            System.out.println("product = " + product);
+        }
         return products;
 
     }

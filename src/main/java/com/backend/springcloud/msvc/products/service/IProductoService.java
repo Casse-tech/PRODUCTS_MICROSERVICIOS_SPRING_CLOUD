@@ -1,7 +1,7 @@
-package com.backend.springcloud.microservicios.service;
+package com.backend.springcloud.msvc.products.service;
 
 import com.backend.lib.mcsv.commons.entity.Product;
-import com.backend.springcloud.microservicios.exception.ResourceNotFoundException;
+import com.backend.springcloud.msvc.products.exception.ResourceNotFoundException;
 
 import java.util.List;
 

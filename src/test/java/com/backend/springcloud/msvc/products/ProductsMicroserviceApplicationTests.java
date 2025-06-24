@@ -1,10 +1,10 @@
-package com.backend.springcloud.microservicios;
+package com.backend.springcloud.msvc.products;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MicroserviciosApplicationTests {
+class ProductsMicroserviceApplicationTests {
 
 	@Test
 	void contextLoads() {

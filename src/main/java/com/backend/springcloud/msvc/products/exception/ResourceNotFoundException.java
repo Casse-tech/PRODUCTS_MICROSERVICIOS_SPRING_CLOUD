@@ -1,4 +1,4 @@
-package com.backend.springcloud.microservicios.exception;
+package com.backend.springcloud.msvc.products.exception;
 
 public class ResourceNotFoundException extends Exception{
     public ResourceNotFoundException(String message) {

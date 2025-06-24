@@ -1,4 +1,4 @@
-package com.backend.springcloud.microservicios.repository;
+package com.backend.springcloud.msvc.products.repository;
 
 import com.backend.lib.mcsv.commons.entity.Product;
 import org.springframework.data.repository.CrudRepository;

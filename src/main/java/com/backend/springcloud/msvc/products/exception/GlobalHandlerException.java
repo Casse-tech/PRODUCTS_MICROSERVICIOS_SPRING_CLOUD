@@ -1,4 +1,4 @@
-package com.backend.springcloud.microservicios.exception;
+package com.backend.springcloud.msvc.products.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
