@@ -18,7 +18,7 @@ jobs:
 
       - name: Clonar librería común
         run: |
-          git clone git@github.com:CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
+          git clone https://github.com/CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
           cd MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB
           mvn clean install
       - name: Build Project
