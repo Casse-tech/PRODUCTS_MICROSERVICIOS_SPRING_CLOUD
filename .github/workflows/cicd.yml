@@ -17,7 +17,7 @@ jobs:
           java-version: '17'
       - name: Build Project
       - name: Clonar librería común
-        run: |
+        run:
           git clone git@github.com:CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
           cd LIB-MICROSERVICIO_COMMONS
           mvn clean install      
