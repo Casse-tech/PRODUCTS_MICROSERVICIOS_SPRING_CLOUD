@@ -1,0 +1,36 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Build Project
+        run: mvn clean install -DskipTests
+      - name: login to docker hub
+        run: echo ${{secrets.DOCKER_HUB_ACCESS_TOKEN}} | docker login -u ${{secrets.DOCKER_HUB}} --password-stdin
+      - name: Build docker image
+        run: docker build -t casseli/ms-products .
+      - name: Publish image to docker hub
+        run: docker push casseli/ms-products:latest
+
+  deploy:
+    needs: build
+    runs-on: [self-hosted]
+    steps:
+      - name: Pull imagen from dockerhub
+        run: docker compose up casseli/ms-products:latest
+      - name: Delete old container
+        run: docker compose down ms-products
+      - name: Run docker container
+        run: docker compose up ms-products
