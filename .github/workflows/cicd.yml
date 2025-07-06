@@ -16,7 +16,12 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Build Project
-        run: mvn clean install -DskipTests
+      - name: Clonar librería común
+        run: |
+          git clone git@github.com:CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
+          cd LIB-MICROSERVICIO_COMMONS
+          mvn clean install      
+          mvn clean install -DskipTests
       - name: login to docker hub
         run: echo ${{secrets.DOCKER_HUB_ACCESS_TOKEN}} | docker login -u ${{secrets.DOCKER_HUB}} --password-stdin
       - name: Build docker image
