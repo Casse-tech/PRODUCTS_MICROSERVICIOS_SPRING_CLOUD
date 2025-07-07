@@ -37,7 +37,7 @@ jobs:
       - name: Pull imagen from dockerhub
         run: |
           cd ~/applications
-          sudo docker compose  pull casseli/ms-products
+          sudo docker compose up ms-products
       - name: Delete old container
         run: sudo docker compose down ms-products
       - name: Run docker container
