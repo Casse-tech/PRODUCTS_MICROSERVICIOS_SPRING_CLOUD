@@ -16,7 +16,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Clonar librería común
+      - name: Clone common lib
         run: |
           git clone https://github.com/CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
           cd MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB
@@ -35,8 +35,8 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: Pull imagen from dockerhub
-        run: docker compose up casseli/ms-products:latest
+        run: docker-compose up casseli/ms-products:latest
       - name: Delete old container
-        run: docker compose down ms-products
+        run: docker-compose down ms-products
       - name: Run docker container
-        run: docker compose up ms-products
+        run: docker-compose up ms-products
