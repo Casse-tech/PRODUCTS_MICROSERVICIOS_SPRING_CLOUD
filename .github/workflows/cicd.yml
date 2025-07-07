@@ -34,9 +34,9 @@ jobs:
     needs: build
     runs-on: [self-hosted]
     steps:
-      - name: Pull imagen from dockerhub
+      - name: Start deployment
         run: |
           cd ~/applications 
-          sudo docker rmi -f casseli/ms-products
           sudo docker compose down ms-products
+          sudo docker rmi -f casseli/ms-products
           sudo docker compose up ms-products -d
