@@ -35,8 +35,8 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: Pull imagen from dockerhub
-        run: sudo docker compose up casseli/ms-products:latest
+        run: docker compose up casseli/ms-products:latest
       - name: Delete old container
-        run: sudo docker compose down ms-products
+        run: docker compose down ms-products
       - name: Run docker container
-        run: sudo docker compose up ms-products
+        run: docker compose up ms-products
