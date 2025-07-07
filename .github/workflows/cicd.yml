@@ -34,8 +34,8 @@ jobs:
     needs: build
     runs-on: [self-hosted]
     steps:
-      - name: working directory
-        run: pwd
+      - name: Working directory
+        run: cd ~/applications
       - name: Pull imagen from dockerhub
         run: docker-compose up casseli/ms-products:latest
       - name: Delete old container
