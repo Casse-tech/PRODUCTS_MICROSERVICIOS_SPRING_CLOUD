@@ -35,10 +35,10 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: Working directory
-        run: cd ~/applications && ls -l ~/applications/docker-compose.yml
+        run: cd ~/applications
       - name: Pull imagen from dockerhub
-        run: sudo docker-compose up casseli/ms-products:latest
+        run: sudo docker compose up ms-products
       - name: Delete old container
-        run: sudo docker-compose down ms-products
+        run: sudo docker compose down ms-products
       - name: Run docker container
-        run: sudo docker-compose up ms-products
+        run: sudo docker compose up ms-products
