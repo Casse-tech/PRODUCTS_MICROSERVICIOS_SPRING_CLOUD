@@ -4,7 +4,7 @@ on: push
 
 jobs:
   test:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted, Linux, X64]
     steps:
       - name: Verifica ejecución
         run: echo "✅ Runner EC2 funcionando correctamente"
