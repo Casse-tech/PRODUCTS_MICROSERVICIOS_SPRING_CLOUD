@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Start deployment
         run: |
-          cd ~/applications 
+          cd ~/app 
           sudo docker compose down ms-products
           sudo docker rmi -f casseli/ms-products
           sudo docker compose up ms-products -d
