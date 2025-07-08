@@ -1,42 +1,10 @@
-name: CICD
+name: Test Runner Only
 
-on:
-  push:
-    branches: [main]
+on: push
 
 jobs:
-  build:
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v3
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Clone common lib
-        run: |
-          git clone https://github.com/CasseliLayza/MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB.git
-          cd MICROSERVICIOS_SPRING_CLOUD_COMMONS_LIB
-          mvn clean install
-      - name: Build Project
-        run: mvn clean install -DskipTests
-      - name: login to docker hub
-        run: echo ${{secrets.DOCKER_HUB_ACCESS_TOKEN}} | docker login -u ${{secrets.DOCKER_HUB}} --password-stdin
-      - name: Build docker image
-        run: docker build -t casseli/ms-products .
-      - name: Publish image to docker hub
-        run: docker push casseli/ms-products:latest
-
-  deploy:
-    needs: build
+  test:
     runs-on: [self-hosted]
     steps:
-      - name: Start deployment
-        run: |
-          cd ~/app 
-          sudo docker compose down ms-products
-          sudo docker rmi -f casseli/ms-products
-          sudo docker compose up ms-products -d
+      - name: Verifica ejecución
+        run: echo "✅ Runner EC2 funcionando correctamente"
