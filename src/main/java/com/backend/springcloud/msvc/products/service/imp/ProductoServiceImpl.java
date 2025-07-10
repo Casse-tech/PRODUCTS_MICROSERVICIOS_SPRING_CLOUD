@@ -87,6 +87,7 @@ public class ProductoServiceImpl implements IProductoService {
 
         productBuscado.setName(product.getName());
         productBuscado.setPrice(product.getPrice());
+        productBuscado.setSku(product.getSku());
         productBuscado.setCreateAt(productBuscado.getCreateAt()!=null?productBuscado.getCreateAt():product.getCreateAt());
         productBuscado.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
 
