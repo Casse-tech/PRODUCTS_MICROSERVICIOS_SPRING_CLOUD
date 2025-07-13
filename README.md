@@ -1,4 +1,4 @@
-![logo](src/main/resources/statics/asets/img/msvc.png)
+![logo](src/main/resources/static/asets/img/msvc.png)
 # Products Microservice - Spring Cloud
 ## 📌 Descripción
 Este proyecto es un microservicio desarrollado con **Spring Boot** y **Spring Cloud**, que forma parte de una arquitectura basada en microservicios. Está diseñado para gestionar productos, incluyendo operaciones CRUD básicas, manejo de excepciones y controladores RESTful.
@@ -148,6 +148,14 @@ Para dudas, sugerencias o contribuciones, puedes escribir a:
 📧 **[casseli.layza@gmail.com](mailto:casseli.layza@gmail.com)**
 
 🔗 [LinkedIn](https://www.linkedin.com/in/casseli-layza/)
-🔗 [GitHub](https://github.com/CasseLayza)
+🔗 [GitHub](https://github.com/CasseliLayza)
 
 💡 *Desarrollado por Casseli Layza como parte de una arquitectura de microservicios con Spring Cloud.*
+
+_**¡Gracias por revisar este proyecto!... Powered by Casse 🌟📚🚀...!!**_
+
+## Derechos Reservados
+
+```markdown
+© 2025 Casse. Todos los derechos reservados.
+```
